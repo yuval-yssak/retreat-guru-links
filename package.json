@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "serve": "^13.0.2"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

@@ -37,6 +37,18 @@ const map = [
     },
   },
   {
+    id: "courses__past-ttc-and-attc",
+    params: {
+      page: "rs-programs",
+      "program_category[0]": "attc",
+      "program_category[1]": "ttc",
+      in_past: "1",
+      order: "desc",
+      orderby: "start_date",
+      paged: "1",
+    },
+  },
+  {
     id: "courses__upcoming-online-courses",
     params: {
       page: "rs-programs",

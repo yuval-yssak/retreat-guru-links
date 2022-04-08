@@ -37,14 +37,35 @@ const map = [
     },
   },
   {
-    id: "courses__online-courses",
+    id: "courses__upcoming-online-courses",
+    params: {
+      page: "rs-programs",
+      orderby: "start_date",
+      order: "asc",
+      tasks_compare: "LIKE",
+      in_future: "1",
+      program_category: "online",
+    },
+  },
+  {
+    id: "courses__current-online-courses",
+    params: {
+      page: "rs-programs",
+      orderby: "start_date",
+      order: "asc",
+      tasks_compare: "LIKE",
+      in_progress: "1",
+      program_category: "online",
+    },
+  },
+  {
+    id: "courses__past-online-courses",
     params: {
       page: "rs-programs",
       orderby: "start_date",
       order: "desc",
       tasks_compare: "LIKE",
-      level: "normal",
-      paged: "1",
+      in_past: "1",
       program_category: "online",
     },
   },

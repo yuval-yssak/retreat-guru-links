@@ -132,19 +132,6 @@ const map = [
     },
   },
   {
-    id: "transactions__cash-payments-yesterday",
-    params: {
-      page: "rs-transactions",
-      min_date: yesterday,
-      max_date: yesterday,
-      "categories[0]": "cash-payment",
-      "categories[1]": "cash-refund",
-      registration_attachment: "registration",
-      totals: "1",
-      paged: "1",
-    },
-  },
-  {
     id: "transactions__accounting-report",
     params: {
       page: "rs-reports-accounting",
@@ -224,3 +211,52 @@ map.forEach((reference) => {
       reference.params
     ).toString()}`;
 });
+
+const cashDatePicker = new Datepicker(
+  document.querySelector(
+    "#transactions__cash-payments--date-input input[name='cash-choose-date']"
+  ),
+  {
+    format: "yyyy MM dd",
+    todayBtn: true,
+    todayBtnMode: 1,
+    autohide: true,
+  }
+);
+cashDatePicker.setDate(new Date());
+const $cashReportLink = document.querySelector(
+  "#transactions__cash-payments--date-input a"
+);
+$cashReportLink.target = "_blank";
+const setCashDate = (date) =>
+  ($cashReportLink.href = `http://sivanandabahamas.secure.retreat.guru/wp-admin/admin.php?${new URLSearchParams(
+    {
+      page: "rs-transactions",
+      min_date: dayjs(date).format("MMM D. YYYY"),
+      max_date: dayjs(date).format("MMM D. YYYY"),
+      "categories[0]": "cash-payment",
+      "categories[1]": "cash-refund",
+      registration_attachment: "registration",
+      totals: "1",
+      paged: "1",
+    }
+  ).toString()}`);
+setCashDate(today);
+
+document
+  .querySelector(
+    "#transactions__cash-payments--date-input input[name='cash-choose-date']"
+  )
+  .addEventListener("changeDate", (event) => setCashDate(event.detail.date));
+
+document
+  .getElementById("transactions__cash-payments")
+  .addEventListener("click", () => {
+    const dateInputContainer = document.querySelector(
+      "#transactions__cash-payments--date-input.date-input-container"
+    );
+
+    if (dateInputContainer.classList.contains("hidden"))
+      dateInputContainer.classList.remove("hidden");
+    else dateInputContainer.classList.add("hidden");
+  });

@@ -1,3 +1,7 @@
+.hidden.hidden {
+  display: none;
+}
+
 h1 {
   text-align: center;
   margin: 2rem;
@@ -64,4 +68,28 @@ nav > ul > li > ul > li > a {
 nav > ul > li > ul > li > a:hover {
   background-color: orange;
   transform: translateY(-1px);
+}
+
+.date-input-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.date-input-container input {
+  width: 8rem;
+}
+
+.date-input-container a {
+  padding: 0.1rem 1rem;
+  display: block;
+  text-decoration: none;
+  background-color: #aaa;
+  border-radius: 0.3rem;
+  color: #333;
+  transition: all 0.2s;
+}
+
+#transactions__cash-payments {
+  cursor: pointer;
 }

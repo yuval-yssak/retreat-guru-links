@@ -7,9 +7,20 @@
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
   </head>
   <body>
     <h1>Retreat Guru Main Menu for Sivananda Bahamas</h1>
+
     <nav>
       <ul>
         <li>
@@ -61,9 +72,16 @@
               >
             </li>
             <li>
-              <a id="transactions__cash-payments-yesterday"
-                >Cash Payments Yesterday</a
+              <a id="transactions__cash-payments">Cash Payments</a>
+              <div
+                id="transactions__cash-payments--date-input"
+                class="hidden date-input-container"
               >
+                <label
+                  >Choose date: <input type="text" name="cash-choose-date"
+                /></label>
+                <a class="button">Go</a>
+              </div>
             </li>
             <li>
               <a id="transactions__accounting-report"

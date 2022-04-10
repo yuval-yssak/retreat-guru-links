@@ -115,23 +115,6 @@ const map = [
     },
   },
   {
-    id: "transactions__total-payments-yesterday",
-    params: {
-      page: "rs-transactions",
-      min_date: yesterday,
-      max_date: yesterday,
-      "categories[0]": "payment",
-      "categories[1]": "cash-payment",
-      "categories[2]": "other-payment",
-      "categories[3]": "refund",
-      "categories[4]": "cash-refund",
-      "categories[5]": "other-refund",
-      registration_attachment: "registration",
-      totals: "1",
-      paged: "1",
-    },
-  },
-  {
     id: "transactions__accounting-report",
     params: {
       page: "rs-reports-accounting",
@@ -212,6 +195,63 @@ map.forEach((reference) => {
     ).toString()}`;
 });
 
+// initialize date picker for total payments
+const totalPaymentsDatePicker = new Datepicker(
+  document.querySelector(
+    "#transactions__total-payments--date-input input[name='total-payments-choose-date']"
+  ),
+  {
+    format: "yyyy MM dd",
+    todayBtn: true,
+    todayBtnMode: 1,
+    autohide: true,
+  }
+);
+totalPaymentsDatePicker.setDate(new Date());
+const $totalPaymentsReportLink = document.querySelector(
+  "#transactions__total-payments--date-input a"
+);
+$totalPaymentsReportLink.target = "_blank";
+const setTotalPaymentsDate = (date) =>
+  ($totalPaymentsReportLink.href = `http://sivanandabahamas.secure.retreat.guru/wp-admin/admin.php?${new URLSearchParams(
+    {
+      page: "rs-transactions",
+      min_date: dayjs(date).format("MMM D. YYYY"),
+      max_date: dayjs(date).format("MMM D. YYYY"),
+      "categories[0]": "payment",
+      "categories[1]": "cash-payment",
+      "categories[2]": "other-payment",
+      "categories[3]": "refund",
+      "categories[4]": "cash-refund",
+      "categories[5]": "other-refund",
+      registration_attachment: "registration",
+      totals: "1",
+      paged: "1",
+    }
+  ).toString()}`);
+setTotalPaymentsDate(today);
+
+document
+  .querySelector(
+    "#transactions__total-payments--date-input input[name='total-payments-choose-date']"
+  )
+  .addEventListener("changeDate", (event) =>
+    setTotalPaymentsDate(event.detail.date)
+  );
+
+document
+  .getElementById("transactions__total-payments")
+  .addEventListener("click", () => {
+    const dateInputContainer = document.querySelector(
+      "#transactions__total-payments--date-input.date-input-container"
+    );
+
+    if (dateInputContainer.classList.contains("hidden"))
+      dateInputContainer.classList.remove("hidden");
+    else dateInputContainer.classList.add("hidden");
+  });
+
+// initialize date picker for cash transactions
 const cashDatePicker = new Datepicker(
   document.querySelector(
     "#transactions__cash-payments--date-input input[name='cash-choose-date']"

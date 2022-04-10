@@ -67,9 +67,17 @@
           <label>Transactions</label>
           <ul>
             <li>
-              <a id="transactions__total-payments-yesterday"
-                >Total Payments Yesterday</a
+              <a id="transactions__total-payments">Total Payments</a>
+              <div
+                id="transactions__total-payments--date-input"
+                class="hidden date-input-container"
               >
+                <label
+                  >Choose date:
+                  <input type="text" name="total-payments-choose-date"
+                /></label>
+                <a class="button">Go</a>
+              </div>
             </li>
             <li>
               <a id="transactions__cash-payments">Cash Payments</a>

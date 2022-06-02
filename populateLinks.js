@@ -148,6 +148,15 @@ const map = [
     },
   },
   {
+    id: "rooms__twin-bed-rooms",
+    params: {
+      "lodging_type[0]": "40",
+      "lodging_type[1]": "38",
+      page: "room-bookings",
+      days: "30",
+    },
+  },
+  {
     id: "rooms__tent-huts",
     params: {
       "lodging_type[0]": "48",

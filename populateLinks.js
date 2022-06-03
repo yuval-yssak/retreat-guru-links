@@ -193,6 +193,7 @@ const map = [
   { id: "reg__yvp" },
   { id: "quick-reg__yvp" },
   { id: "quick-reg__speaker" },
+  { id: "quick-reg__donation" },
 ];
 
 map.forEach((reference) => {

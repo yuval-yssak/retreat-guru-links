@@ -60,6 +60,19 @@ const map = [
     },
   },
   {
+    id: "courses__upcoming-online-onsite-courses",
+    params: {
+      page: "rs-programs",
+      orderby: "start_date",
+      order: "asc",
+      "program_category[0]": "all-courses",
+      "program_category[1]": "attc",
+      "program_category[2]": "ttc",
+      "program_category[3]": "online",
+      in_future: "1",
+    },
+  },
+  {
     id: "courses__current-online-courses",
     params: {
       page: "rs-programs",

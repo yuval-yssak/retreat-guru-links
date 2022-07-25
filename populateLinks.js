@@ -1,5 +1,6 @@
 const today = dayjs().format("MMM D, YYYY");
 const yesterday = dayjs().subtract(1, "day").format("MMM D, YYYY");
+const aWeekAgo = dayjs().subtract(1, "week").format("MMM D, YYYY");
 const oneMonthForward = dayjs().add(1, "month").format("MMM D, YYYY");
 
 const map = [
@@ -139,6 +140,17 @@ const map = [
       page: "rs-reports-accounting",
       start: dayjs().subtract(1, "day").format("YYYY-MM-DD"),
       end: dayjs().subtract(1, "day").format("YYYY-MM-DD"),
+    },
+  },
+  {
+    id: "transactions__refunds-last-7-days",
+    params: {
+      "categories[0]": "refund",
+      "categories[1]": "cash-refund",
+      "categories[2]": "other-refund",
+      max_date: today,
+      min_date: aWeekAgo,
+      page: "rs-transactions",
     },
   },
 

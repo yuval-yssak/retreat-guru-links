@@ -153,6 +153,17 @@ const map = [
       page: "rs-transactions",
     },
   },
+  {
+    id: "transactions__past-open-balances",
+
+    params: {
+      max_stay: today,
+      page: "registrations",
+      balance_due: "registration",
+      orderby: "start_date",
+      order: "desc",
+    },
+  },
 
   {
     id: "rooms__deluxe-rooms",

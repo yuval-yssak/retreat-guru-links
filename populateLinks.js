@@ -242,12 +242,13 @@ const map = [
 
 map.forEach((reference) => {
   const $a = document.getElementById(reference.id);
-  $a.target = "_blank";
   if (reference.params)
     $a.href = `https://sivanandabahamas.secure.retreat.guru/wp-admin/admin.php?${new URLSearchParams(
       reference.params
     ).toString()}`;
 });
+
+document.querySelectorAll("a").forEach(($) => ($.target = "_blank"));
 
 // initialize date picker for total payments
 const totalPaymentsDatePicker = new Datepicker(

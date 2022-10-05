@@ -179,6 +179,7 @@ const map = [
     params: {
       "lodging_type[0]": "46",
       "lodging_type[1]": "41",
+      "lodging_type[2]": "11761",
       page: "room-bookings",
       days: "30",
     },

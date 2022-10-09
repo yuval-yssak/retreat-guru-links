@@ -238,6 +238,8 @@ const map = [
   { id: "reg__yvp" },
   { id: "quick-reg__yvp" },
   { id: "quick-reg__speaker" },
+  { id: "quick-reg__children" },
+  { id: "quick-reg__babies" },
   { id: "quick-reg__donation" },
 ];
 

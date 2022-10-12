@@ -175,6 +175,22 @@ const map = [
     },
   },
   {
+    id: "rooms__oceanview-deluxe-rooms",
+    params: {
+      "lodging_type[0]": "44",
+      page: "room-bookings",
+      days: "30",
+    },
+  },
+  {
+    id: "rooms__beachfront-deluxe-rooms",
+    params: {
+      "lodging_type[0]": "36",
+      page: "room-bookings",
+      days: "30",
+    },
+  },
+  {
     id: "rooms__single-double-rooms",
     params: {
       "lodging_type[0]": "46",

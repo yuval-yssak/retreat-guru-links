@@ -129,6 +129,29 @@ const map = [
     },
   },
   {
+    id: "population__current-food-allergies",
+    params: {
+      page: "registrations",
+      orderby: "program_ID",
+      order: "asc",
+      "program_category[0]": "30",
+      min_stay: today,
+      max_stay: today,
+      "statuses[0]": "reserved",
+      "statuses[1]": "arrived",
+      "statuses[2]": "checked-out",
+      payment: "1",
+      summary: "1",
+      "meal-summary": "1",
+      report_description:
+        "A+list+of+food+allergies+for+guests-in-house+(as+of+today)",
+      paged: "1",
+      success: true,
+      report_added: 12323,
+      "rs-report": 12323,
+    },
+  },
+  {
     id: "transactions__accounting-report",
     params: {
       page: "rs-reports-accounting",

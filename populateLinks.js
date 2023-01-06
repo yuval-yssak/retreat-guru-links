@@ -18,11 +18,9 @@ const map = [
       "statuses[2]":"checked-out",
       "fields[do-you-have-any-food-allergies-or-dietary-restrictions]":"ANY",
       "rs-report":"12323",
-      "rs-action":"filter",
       payment:"1",
       summary:"1",
       "meal-summary":"1",
-      "rs-report-screen":"toplevel_page_registrations",
       paged:"1"    },
   },
   {

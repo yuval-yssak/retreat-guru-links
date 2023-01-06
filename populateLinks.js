@@ -5,6 +5,27 @@ const oneMonthForward = dayjs().add(1, "month").format("MMM D, YYYY");
 
 const map = [
   {
+    id: "population__upcoming-food-allergies",
+    params: {
+      page:"registrations",
+      orderby:"program_ID",
+      order:"asc",
+      "program_category[0]":"30",
+      "stay_range":"in-next",
+      arriving:"30",
+      "statuses[0]":"reserved",
+      "statuses[1]":"arrived",
+      "statuses[2]":"checked-out",
+      "fields[do-you-have-any-food-allergies-or-dietary-restrictions]":"ANY",
+      "rs-report":"12323",
+      "rs-action":"filter",
+      payment:"1",
+      summary:"1",
+      "meal-summary":"1",
+      "rs-report-screen":"toplevel_page_registrations",
+      paged:"1"    },
+  },
+  {
     id: "courses__upcoming-cousres",
     params: {
       page: "rs-programs",

@@ -39,11 +39,15 @@ const map = [
       "fields[address]":"ANY",
       "rs-action":"filter",
       orderby:"start_date",
-      order:"asc",    
+      order:"asc",  
+      paged:"1",
+      success:"true",
+      "report_added":"12457",
+      "rs-report":"12457" 
     },
   },
   {
-    id: "courses__upcoming-cousres",
+    id: "courses__upcoming-courses",
     params: {
       page: "rs-programs",
       "program_category[0]": "all-courses",

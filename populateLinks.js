@@ -24,6 +24,25 @@ const map = [
       paged:"1"    },
   },
   {
+    id: "population__upcoming-us-arrivals",
+    params: {
+      page:"registrations",
+      "program_category[0]":"21",
+      "program_category[1]":"8",
+      "program_category[2]":"53",
+      "program_category[3]":"9",
+      "program_category[4]":"40",
+      "program_category[5]":"29",
+      "stay_range":"in-next",
+      arriving:"30",
+      "statuses[0]":"reserved",
+      "fields[address]":"ANY",
+      "rs-action":"filter",
+      orderby:"start_date",
+      order:"asc",    
+    },
+  },
+  {
     id: "courses__upcoming-cousres",
     params: {
       page: "rs-programs",

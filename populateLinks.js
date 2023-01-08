@@ -46,6 +46,14 @@ const map = [
       "rs-report":"12457" 
     },
   },
+  
+  {
+    id: "population__match-registrations",
+    params: {
+      page:"rs-persons-match-registrations",
+    },
+  },
+
   {
     id: "courses__upcoming-courses",
     params: {

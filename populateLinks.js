@@ -232,10 +232,11 @@ const map = [
   },
 
   {
-    id: "rooms__deluxe-rooms",
+    id: "rooms__has-bathroom",
     params: {
       "lodging_type[0]": "44",
       "lodging_type[1]": "36",
+      "lodging_type[2]": "516",
       page: "room-bookings",
       days: "30",
     },
@@ -253,6 +254,14 @@ const map = [
     params: {
       "lodging_type[0]": "36",
       page: "room-bookings",
+      days: "30",
+    },
+  },
+  {
+    id: "rooms__bayside-with-bath",
+    params: {
+      "lodging_type[0]": "516",
+      page: "room-bookings", 
       days: "30",
     },
   },

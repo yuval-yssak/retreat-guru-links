@@ -5,6 +5,60 @@ const oneMonthForward = dayjs().add(1, "month").format("MMM D, YYYY");
 
 const map = [
   {
+    id: "population__balances-due-14-days", 
+    params: {
+      page:"registrations",
+      orderby:"start_date",
+      order:"asc",
+      "stay_range":"in-next",
+      arriving:"14",
+      "statuses[0]":"reserved",
+      "statuses[1]":"arrived",
+      "statuses[2]":"checked-out",
+      "balance_due":"registration",
+      payment:"1",
+      paged:"1",
+    },
+  },
+  {
+    id: "population__payment-reminders",
+    params: {
+      "program_category[0]":"30",
+      "stay_range":"in-next",
+      arriving:"21",
+      "statuses[0]":"reserved",
+      "statuses[1]":"arrived",
+      "statuses[2]":"checked-out",
+      payment:"1",
+      page:"registrations",
+      "hidden-report-export-columns":"first_name%2Clast_name%2Carrive_date%2Cleave_date%2Clodging%2Cpaymenttravel_reminder_sent%2Carrival_info_sent%2Cbalance_due",
+      "rs-report":"12321",
+      "rs-action":"filter",
+      orderby:"start_date",
+      order:"asc",
+    },
+  },
+
+  {
+    id: "population__arrival-instructions",
+    params: {
+      "program_category[0]":"30",
+      "stay_range":"in-next",
+      arriving:"5",
+      "statuses[0]":"reserved",
+      "statuses[1]":"arrived",
+      "statuses[2]":"checked-out",
+      payment:"1",
+      page:"registrations",
+      "hidden-report-export-columns":"first_name%2Clast_name%2Carrive_date%2Cleave_date%2Clodging%2Cpaymenttravel_reminder_sent%2Carrival_info_sent%2Cbalance_due",
+      "rs-report":"12321",
+      "rs-action":"filter",
+      orderby:"start_date",
+      order:"asc",
+    },
+  },  
+
+  {
     id: "population__upcoming-food-allergies",
     params: {
       "program_category[0]":"30",
@@ -23,7 +77,7 @@ const map = [
       order:"asc",
     },
   },
-
+/*
   {
     id: "population__upcoming-us-arrivals",
     params: {
@@ -47,7 +101,7 @@ const map = [
       "rs-report":"12457" 
     },
   },
-  
+  */
   {
     id: "population__match-registrations",
     params: {

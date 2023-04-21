@@ -21,6 +21,27 @@ const map = [
     },
   },
   {
+    id: "population__OVD-bed-setup",
+    params: {
+      page:"registrations",
+      orderby:"start_date",
+      order:"asc",
+      "program_category[0]":"30",
+      "stay_range":"in-next",
+      arriving:"365",
+      "statuses[0]":"reserved",
+      "statuses[1]":"arrived",
+      "statuses[2]":"checked-out",
+      "fields[are-you-staying-in-an-oceanview-deluxe-room]":"yes-i-am-staying-in-an-oceanview-deluxe-room",
+      "rs-action":"filter",
+      "rs-report-screen":"toplevel_page_registrations",
+      paged:"1",
+      success:"true",
+      "report_added":"13092",
+      "rs-report":"13092",
+    },
+  },
+  {
     id: "population__payment-reminders",
     params: {
       "program_category[0]":"30",

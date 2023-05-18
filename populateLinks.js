@@ -401,7 +401,19 @@ const map = [
   {
     id: "rooms__karma-yogis-summer",
     params: {
-      "lodging_type[0]": "7203",
+     /* "lodging_type[0]": "7203", */
+      "lodging_type[1]": "3477",
+      "lodging_type[2]": "3479",
+      "lodging_type[3]": "6649",
+      "lodging_type[4]": "3476",
+      "lodging_type[5]": "6632",
+      "lodging_type[6]": "3478",
+      "lodging_type[7]": "40",
+      "lodging_type[8]": "46",
+      "lodging_type[9]": "488",
+      "lodging_type[10]": "38",
+      "lodging_type[11]": "41",
+      "lodging_type[12]": "42",
       page: "room-bookings",
       days: "60",
     },
